@@ -1,0 +1,1 @@
+to generate tsc config => tsc --init
