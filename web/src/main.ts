@@ -1,8 +1,9 @@
-import { User } from "./models/User";
-const user = new User({id:8580})
+import { Collection } from "./models/Collection";
 
-user.fetch()
+const userCollection = new Collection('http://localhost:3000/users')
 
-setTimeout(()=>{
-    console.log(user)
-},1000)
+userCollection.on('change',()=>{
+    console.log('collections',userCollection)
+})
+
+userCollection.fetch()
