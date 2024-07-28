@@ -1,9 +1,19 @@
-import { Collection } from "./models/Collection";
+// import { Collection } from "./models/Collection";
+// import {User,UserProps} from "./models/User"
 
-const userCollection = new Collection('http://localhost:3000/users')
+// const userCollection = User.buildUserCollection()
 
-userCollection.on('change',()=>{
-    console.log('collections',userCollection)
-})
+// userCollection.on('change',()=>{
+//     console.log('collections',userCollection)
+// })
 
-userCollection.fetch()
+// userCollection.fetch()
+
+
+import { UserForm } from "./views/UserForm";
+
+const userForm =new  UserForm(
+    document.getElementById('app')
+)
+
+userForm.render()
